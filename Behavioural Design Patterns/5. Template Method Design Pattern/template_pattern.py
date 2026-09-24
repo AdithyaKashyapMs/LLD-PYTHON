@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import  abstractmethod
 
 # This is an Template where open and close methods are common for all the parsers and the
 #  dataParser method is specific to each parser
