@@ -52,3 +52,4 @@ new_chess_board.display_board()
 # The copying of piece should be handled by the ChessPiece class itself. 
 # The ChessPiece class should have a method to clone itself and return a new instance of the same piece with the same properties.
 #  This way, we can create a new chess board by cloning all the pieces from the original board.
+# This can be solved 
