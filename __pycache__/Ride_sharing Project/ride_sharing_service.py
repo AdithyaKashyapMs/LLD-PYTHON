@@ -6,6 +6,8 @@ from location import Location
 from math import sqrt
 
 class RideSharingServiceApp:
+    # This is a high - level class but it has a calculate class which is low level class which is violating the Dependency Inversion Principle.
+    #  We can create a separate class for fare calculation and distance calculation and inject it into this class. This will make the code more flexible and maintainable.
     def __init__(self):
         self.drivers: List[Driver] = []
         self.passengers: List[Passenger] = []
@@ -27,6 +29,7 @@ class RideSharingServiceApp:
 
     def __calcFare(self, vehicle: Vehicle, distance: float):
         # Fare Calculation based on vehicle type and distance
+        # This is violating OCP principle if we want to add auto etc we should modify the code
         if vehicle.type == "Car":
             return distance * 20
         elif vehicle.type == "Bike":
